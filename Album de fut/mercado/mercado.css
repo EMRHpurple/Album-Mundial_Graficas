@@ -1,0 +1,367 @@
+/* CONTENEDOR GENERAL */
+
+.trade-container{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+padding:40px 60px;
+
+}
+
+/* COLUMNAS */
+
+.trade-column h2{
+
+margin-bottom:20px;
+
+color:#e3def3;
+
+}
+
+/* GRID DE TRUEQUES */
+
+.trade-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+/* TARJETA TRUEQUE */
+
+.trade-card{
+
+background:#1f1c2d;
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+padding:14px;
+
+text-align:center;
+
+transition:.2s;
+
+cursor:pointer;
+
+}
+
+.trade-card:hover{
+
+transform:translateY(-4px);
+
+border-color:#8e7dff;
+
+}
+
+/* BOTON FLOTANTE */
+
+.add-trade-btn{
+
+position:fixed;
+
+bottom:40px;
+
+right:40px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:#8e7dff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+
+transition:.2s;
+
+}
+
+.add-trade-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* NOTIFICACIONES */
+
+.notification-icon{
+
+position:fixed;
+
+top:40px;
+
+right:60px;
+
+width:26px;
+
+height:26px;
+
+border-radius:50%;
+
+background:#8e7dff;
+
+box-shadow:0 0 0 4px #14131b;
+
+cursor:pointer;
+
+}
+
+/* MODAL */
+
+.trade-modal{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.trade-modal-content{
+
+background:#1f1c2d;
+
+padding:30px;
+
+border-radius:14px;
+
+width:320px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+/* ================================
+FORMULARIO TRUEQUE
+================================ */
+
+.trade-modal-content label{
+
+font-size:14px;
+opacity:.8;
+
+}
+
+.trade-modal-content select,
+.trade-modal-content input{
+
+width:100%;
+
+padding:10px 12px;
+
+border-radius:8px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+background:#2d2842;
+
+color:white;
+
+font-size:14px;
+
+outline:none;
+
+transition:.2s;
+
+}
+
+.trade-modal-content select:focus,
+.trade-modal-content input:focus{
+
+border-color:#8e7dff;
+
+box-shadow:0 0 0 2px rgba(142,125,255,0.2);
+
+}
+
+
+/* BOTON PUBLICAR TRUEQUE */
+
+.trade-modal-content button{
+
+margin-top:10px;
+
+padding:12px;
+
+border:none;
+
+border-radius:10px;
+
+background:linear-gradient(90deg,#8e7dff,#c3baff);
+
+color:white;
+
+font-size:14px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.trade-modal-content button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+
+}
+
+.trade-modal-content button:active{
+
+transform:scale(.97);
+
+}
+
+/* PANEL NOTIFICACIONES */
+
+.notifications-panel{
+
+position:fixed;
+
+top:0;
+
+right:-320px;
+
+width:320px;
+
+height:100%;
+
+background:#1f1c2d;
+
+border-left:1px solid rgba(255,255,255,0.08);
+
+padding:25px;
+
+transition:.35s;
+
+z-index:1000;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+/* PANEL ACTIVO */
+
+.notifications-panel.active{
+
+right:0;
+
+}
+
+/* TITULO */
+
+.notifications-panel h3{
+
+color:#e3def3;
+
+}
+
+/* LISTA */
+
+.notification-list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+/* ITEM */
+
+.notification-item{
+
+background:#2d2842;
+
+padding:12px;
+
+border-radius:10px;
+
+font-size:13px;
+
+opacity:.9;
+
+}
+
+/* HEADER DEL PANEL */
+
+.notifications-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:10px;
+
+}
+
+/* BOTON CERRAR */
+
+.close-notifications{
+
+cursor:pointer;
+
+font-size:18px;
+
+opacity:.7;
+
+transition:.2s;
+
+}
+
+.close-notifications:hover{
+
+opacity:1;
+
+transform:scale(1.1);
+
+}

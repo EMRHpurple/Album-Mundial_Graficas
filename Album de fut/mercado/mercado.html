@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Mercado de Trueques</title>
+
+<link rel="stylesheet" href="../album/album.css">
+<link rel="stylesheet" href="mercado.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Mercado de Trueques</h1>
+
+</header>
+
+<main>
+
+<div class="trade-container">
+
+<!-- TRUEQUES DE OTROS USUARIOS -->
+
+<div class="trade-column">
+
+<h2>Trueques disponibles</h2>
+
+<div class="trade-grid" id="marketTrades">
+
+<div class="trade-card">
+<p><strong>Ofrece:</strong> Jugador 3</p>
+<p><strong>Busca:</strong> Jugador 7</p>
+</div>
+
+<div class="trade-card">
+<p><strong>Ofrece:</strong> Jugador 5</p>
+<p><strong>Busca:</strong> Jugador 2</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- TRUEQUES DEL USUARIO -->
+
+<div class="trade-column">
+
+<h2>Mis trueques</h2>
+
+<div class="trade-grid" id="myTrades">
+
+<div class="trade-card">
+<p><strong>Ofrezco:</strong> Jugador 1</p>
+<p><strong>Quiero:</strong> Jugador 8</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- BOTON FLOTANTE CREAR TRUEQUE -->
+
+<div class="add-trade-btn" id="openTradeForm">
++
+</div>
+
+<!-- NOTIFICACIONES -->
+
+<div class="notification-icon" id="notifications"></div>
+
+<!-- MODAL FORMULARIO TRUEQUE -->
+
+<div class="trade-modal" id="tradeModal">
+
+<div class="trade-modal-content">
+
+<h3>Crear trueque</h3>
+
+<label>Carta que ofreces</label>
+
+<select>
+<option>Jugador 1</option>
+<option>Jugador 2</option>
+<option>Jugador 3</option>
+</select>
+
+<label>Carta que quieres</label>
+
+<select>
+<option>Jugador 5</option>
+<option>Jugador 6</option>
+<option>Jugador 7</option>
+</select>
+
+<button>Publicar trueque</button>
+
+</div>
+
+</div>
+   <div class="notifications-panel" id="notificationsPanel">
+
+<div class="notifications-header">
+
+<h3>Notificaciones</h3>
+
+<span class="close-notifications" id="closeNotifications">✕</span>
+
+</div>
+
+<div class="notification-list">
+
+<div class="notification-item">
+<p>Usuario123 quiere cambiar Jugador 4 por tu Jugador 7</p>
+</div>
+
+<div class="notification-item">
+<p>Tu trueque fue aceptado</p>
+</div>
+
+</div>
+
+</div>
+
+<script src="mercado.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Álbum Mundial 2026</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+<div class="page-wrapper">  
+<div class="container">
+
+    <h1>MUNDIAL 2026</h1>
+
+    <p class="subtitle">
+        Álbum digital de estampillas coleccionables de jugadores del Mundial 2026.
+        Completa tu colección y descubre todas las estrellas del torneo.
+    </p>
+
+    <div class="line"></div>
+
+        <div class="menu">
+            <a href="#" id="infoBtn">Info</a>
+            <a href="#" id="loginBtn">Inicio de sesión</a>
+            <a href="#" id="registroBtn">Registro</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="infoModal">
+
+   <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img src="elnoviodihoquenoestabacristiano.avif" class="modal-image">
+
+        <h2>¿Cómo funciona este álbum?</h2>
+
+        <p>
+        Este álbum digital te permite coleccionar estampillas de los jugadores que participarán en el Mundial 2026.
+        </p>
+
+        <p>
+        Puedes obtener estampillas mediante sobres que recibes. Cada sobre contiene 4 estampillas aleatorias que se agregan a tu colección.
+        </p>
+
+        <p>
+        Las estampillas pueden tener diferentes rarezas:
+        <b>comunes, poco comunes, raras y épicas.</b>
+        </p>
+
+        <p>
+        Las estampillas repetidas pueden intercambiarse con otros usuarios para completar tu álbum.
+        </p>
+
+        <p>
+        Completa tu álbum coleccionando todos los jugadores del Mundial 2026.
+        </p>
+
+        <p>
+        ¡Diviertete!
+        </p>
+
+    </div>
+
+</div>
+
+
+<div id="modalRegistro" class="modal form-modal">
+
+<div class="modal-content">
+
+    <span class="close" onclick="cerrarModal('modalRegistro')">&times;</span>
+
+    <h2>Registro</h2>
+
+    <form>
+
+    <input type="text" id="regNombre" placeholder="Nombre completo">
+        <div id="errorNombre" class="error"></div>
+
+        <input type="email" id="regCorreo" placeholder="Correo electrónico">
+        <div id="errorCorreo" class="error"></div>
+
+        <input type="password" id="regPass" placeholder="Contraseña">
+        <div id="errorPass" class="error"></div>
+
+        <input type="password" id="regPass2" placeholder="Confirmar contraseña">
+        <div id="errorPass2" class="error"></div>
+
+        <button type="button" onclick="registrarUsuario()">Crear cuenta</button>
+
+        </form>
+
+        </div>
+</div>
+
+
+<div id="modalLogin" class="modal form-modal">
+
+    <div class="modal-content">
+
+    <span class="close" onclick="cerrarModal('modalLogin')">&times;</span>
+
+    <h2>Inicio de sesión</h2>
+
+    <form>
+
+    <input type="email" id="loginCorreo" placeholder="Correo electrónico">
+        <div id="errorLoginCorreo" class="error"></div>
+
+        <input type="password" id="loginPass" placeholder="Contraseña">
+        <div id="errorLoginPass" class="error"></div>
+
+    <button type="button" onclick="iniciarSesion()">Entrar</button>
+
+    </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>

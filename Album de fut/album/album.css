@@ -1,0 +1,474 @@
+/* ================================
+RESET
+================================ */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#14131b;
+color:white;
+min-height:100vh;
+}
+
+
+/* ================================
+DASHBOARD
+================================ */
+
+header{
+
+padding:35px 60px;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+background:linear-gradient(
+to bottom,
+#1b1826,
+#14131b
+);
+
+}
+
+#welcome{
+font-size:28px;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.dashboard{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+
+}
+
+
+/* PROGRESO */
+
+.progress-box{
+
+background:#1f1c2d;
+
+border:1px solid #ffffff15;
+
+padding:20px 24px;
+
+border-radius:12px;
+
+min-width:240px;
+
+}
+
+.progress-bar{
+
+height:12px;
+
+background:#2c2940;
+
+border-radius:8px;
+
+overflow:hidden;
+
+margin-top:10px;
+
+}
+
+.progress{
+
+height:100%;
+
+width:35%;
+
+background:linear-gradient(90deg,#8e7dff,#c3baff);
+
+}
+
+.progress-text{
+margin-top:8px;
+font-size:14px;
+opacity:.8;
+}
+
+
+/* BOTONES DASHBOARD */
+
+.dashboard-links{
+
+display:flex;
+gap:12px;
+
+}
+
+.dashboard-links button{
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+background:#2d2842;
+
+color:white;
+
+font-size:14px;
+
+transition:.2s;
+
+}
+
+.dashboard-links button:hover{
+
+background:#8e7dff;
+
+transform:translateY(-2px);
+
+}
+
+
+/* ================================
+GRID EQUIPOS
+================================ */
+
+#teamsContainer{
+
+display:grid;
+
+/* EXACTAMENTE 5 por fila */
+
+grid-template-columns:repeat(5,1fr);
+
+gap:26px;
+
+padding:40px 60px;
+
+}
+
+
+/* TARJETA */
+
+.team-card{
+
+background:#1f1c2d;
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:.25s;
+
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+
+}
+
+.team-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#8e7dff;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+
+/* IMAGEN */
+
+.team-img{
+
+width:100%;
+
+height:160px;
+
+object-fit:cover;
+
+}
+
+
+/* INFO */
+
+.team-info{
+
+padding:10px 12px;
+
+}
+
+.team-info h3{
+
+color:#e3def3;
+
+font-size:16px;
+
+margin-bottom:2px;
+
+}
+
+.team-info p{
+
+color:#e3def3;
+
+font-size:13px;
+
+opacity:.7;
+
+}
+
+
+/* ================================
+TABLET
+================================ */
+
+@media (max-width:1000px){
+
+#teamsContainer{
+
+grid-template-columns:repeat(3,1fr);
+
+padding:30px;
+
+}
+
+.team-img{
+height:140px;
+}
+
+}
+
+
+/* ================================
+MOVIL
+================================ */
+
+@media (max-width:600px){
+
+header{
+padding:25px;
+}
+
+#welcome{
+font-size:22px;
+}
+
+.dashboard{
+flex-direction:column;
+align-items:flex-start;
+}
+
+#teamsContainer{
+
+grid-template-columns:repeat(2,1fr);
+
+padding:20px;
+
+gap:18px;
+
+}
+
+.team-img{
+height:120px;
+}
+
+}
+
+
+/* ================================
+MOVIL PEQUEÑO
+================================ */
+
+@media (max-width:380px){
+
+#teamsContainer{
+grid-template-columns:1fr;
+}
+
+}
+
+
+/* ================================
+GRID JUGADORES
+================================ */
+
+#playersContainer{
+
+display:grid;
+
+/* 4 por fila */
+
+grid-template-columns:repeat(4,1fr);
+
+gap:26px;
+
+padding:40px 60px;
+
+}
+
+
+/* TARJETA JUGADOR */
+
+.player-card{
+
+background:#1f1c2d;
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:.25s;
+
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+
+}
+
+.player-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#8e7dff;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+
+
+/* IMAGEN JUGADOR */
+
+.player-img{
+
+width:100%;
+
+height:160px;
+filter:grayscale(100%);
+object-fit:cover;
+
+}
+
+
+/* INFO JUGADOR */
+
+.player-info{
+
+padding:10px 12px;
+
+text-align:center;
+
+}
+
+.player-info h3{
+
+color:#e3def3;
+
+font-size:16px;
+
+margin-bottom:2px;
+
+}
+
+.player-info p{
+
+color:#e3def3;
+
+font-size:13px;
+
+opacity:.7;
+
+}
+
+/* ================================
+TABLET JUGADORES
+================================ */
+
+@media (max-width:1000px){
+
+#playersContainer{
+
+grid-template-columns:repeat(3,1fr);
+
+padding:30px;
+
+}
+
+}
+
+
+/* ================================
+MOVIL JUGADORES
+================================ */
+
+@media (max-width:600px){
+
+#playersContainer{
+
+grid-template-columns:repeat(2,1fr);
+
+padding:20px;
+
+gap:18px;
+
+}
+
+}
+
+
+/* ================================
+MOVIL PEQUEÑO
+================================ */
+
+@media (max-width:380px){
+
+#playersContainer{
+grid-template-columns:1fr;
+}
+
+}
+
+
+.back-button{
+
+margin:20px 60px;
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:8px;
+
+background:#2d2842;
+
+color:white;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.back-button:hover{
+
+background:#8e7dff;
+
+transform:translateY(-2px);
+
+}

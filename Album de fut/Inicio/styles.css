@@ -1,0 +1,514 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+position:relative;
+
+}
+
+/* IMAGEN DE FONDO */
+
+body::before{
+
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:url("mundial.webp") center/cover no-repeat;
+
+z-index:-2;
+
+}
+
+/* CAPA OSCURA QUE SE DESVANECE (NO JALA LA CHINGADERA) */
+
+body::after{
+
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+to bottom,
+rgba(15,15,25,0.95),
+rgba(15,15,25,0.85),
+rgba(15,15,25,0.65),
+rgba(15,15,25,0.3)
+);
+
+z-index:-1;
+
+}
+
+.container{
+
+text-align:center;
+width:90%;
+max-width:700px;
+padding:20px;
+
+}
+
+h1{
+
+letter-spacing:8px;
+font-size:48px;
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+font-size:14px;
+color:#dcdcdc;
+margin-bottom:30px;
+
+}
+
+.line{
+
+width:100%;
+height:1px;
+background:rgba(255,255,255,0.4);
+margin:35px 0;
+
+}
+
+/* BOTONES */
+
+.menu{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.menu a{
+
+text-decoration:none;
+color:white;
+border:1px solid rgba(255,255,255,0.4);
+
+padding:12px 28px;
+transition:0.3s;
+
+}
+
+/* que se vean como un bloque */
+
+.menu a:first-child{
+
+border-radius:5px 0 0 5px;
+
+}
+
+.menu a:last-child{
+
+border-radius:0 5px 5px 0;
+
+}
+
+.menu a:not(:last-child){
+
+border-right:none;
+
+}
+
+.menu a:hover{
+
+background:white;
+color:black;
+
+}
+
+/* PARA MOVIL */
+
+@media (max-width:600px){
+
+h1{
+font-size:34px;
+letter-spacing:4px;
+}
+
+.subtitle{
+font-size:13px;
+}
+
+.menu{
+flex-direction:column;
+align-items:center;
+}
+
+.menu a{
+
+border-radius:5px;
+border-right:1px solid rgba(255,255,255,0.4);
+margin:5px 0;
+width:200px;
+text-align:center;
+
+}
+
+}
+
+/* ANIMACION FADE IN */
+
+.container{
+
+text-align:center;
+width:90%;
+max-width:700px;
+padding:20px;
+
+opacity:0;
+transform:translateY(20px);
+
+animation:fadeIn 1.4s ease forwards;
+
+}
+
+/* KEYFRAMES */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+/* PA QUE APAREZCAN DESPUES LOS BOTONES */
+.menu{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+opacity:0;
+animation:fadeIn 1.4s ease forwards;
+animation-delay:0.6s;
+
+}
+
+
+/* MODAL */
+
+.modal{
+
+display:none;
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.5);
+
+justify-content:center;
+align-items:center;
+
+backdrop-filter: blur(6px);
+
+}
+
+/* CONTENDO DE LOS MODALES */
+
+.modal-content{
+
+background: rgba(20,20,25,0.75);
+
+backdrop-filter: blur(10px);
+
+color:white;
+
+padding:40px;
+
+width:90%;
+max-width:520px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.15);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+position:relative;
+
+animation:fadeInModal 0.4s ease;
+
+}
+
+/* BOTON X */
+
+.close{
+
+position:absolute;
+top:15px;
+right:20px;
+font-size:22px;
+cursor:pointer;
+color:#666;
+
+}
+
+/* ANIMACION */
+
+@keyframes fadeInModal{
+
+from{
+
+opacity:0;
+transform: translateY(30px) scale(0.95);
+
+}
+
+to{
+
+opacity:1;
+transform: translateY(0) scale(1);
+
+}
+
+}
+
+/* Esta madre es el tiempo de la animacion, NO MOVER */
+.page-wrapper{
+
+transition: all 0.5s ease;
+
+}
+
+/* Cuando modal se activa, la animación comienza */
+
+.page-wrapper.modal-active{
+
+transform: scale(0.92);
+
+filter: blur(4px);
+
+opacity:0.7;
+
+}
+
+/* La imagen de info, pa que se vea bonito */
+.modal-image{
+
+width:100%;
+height:180px;
+object-fit:cover;
+object-position:center top;
+
+border-radius:10px;
+margin-bottom:20px;
+
+}
+
+
+/* ESTILO DE TEXTO DESPGADO */
+
+.modal-content p{
+
+line-height:1.8;
+
+margin-bottom:14px;
+
+color:rgba(255,255,255,0.9);
+
+}
+
+/* ERRRES EN ROJO SIN ALERT */
+.error{
+color:#ff6b8a;
+font-size:13px;
+margin:4px 0 10px 0;
+text-align:left;
+}
+
+
+/* MODALES DE FORMULARIO (login y registro) */
+
+.modal.form-modal{
+display:none;
+justify-content:center;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+
+backdrop-filter: blur(6px);
+
+z-index:2000;
+}
+
+/* CONTENIDO DEL MODAL */
+
+.modal.form-modal .modal-content{
+
+background: rgba(30,30,40,0.85);
+
+backdrop-filter: blur(10px);
+
+padding:45px 40px;
+
+width:90%;
+max-width:380px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 25px 70px rgba(0,0,0,0.6);
+
+position:relative;
+
+/* usa la misma animación que el modal de info */
+
+animation:fadeInModal 0.4s ease;
+
+}
+
+
+/* TITULOS */
+
+.modal-content h2{
+
+margin-bottom:28px;
+
+font-weight:600;
+
+color:#e3def3;
+
+font-size:24px;
+
+letter-spacing:1px;
+
+}
+
+
+/* FORMULARIO */
+
+.modal-content form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+
+/* INPUTS */
+
+.modal-content input{
+
+background:#1c1c26;
+
+padding:13px 14px;
+
+border-radius:10px;
+
+border:1px solid #44415b;
+
+font-size:14px;
+
+color:white;
+
+outline:none;
+
+transition:0.25s;
+
+}
+
+
+/* PLACEHOLDER */
+
+.modal-content input::placeholder{
+
+color:#9a96b5;
+
+}
+
+
+/* FOCUS */
+
+.modal-content input:focus{
+
+border-color:#a58cff;
+
+box-shadow:0 0 10px rgba(165,140,255,0.35);
+
+background:#202030;
+
+}
+
+
+/* BOTONES */
+
+.modal-content button{
+
+margin-top:10px;
+
+padding:13px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(135deg,#8f86b9,#6e5fb3);
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+font-size:15px;
+
+transition:0.25s;
+
+}
+
+
+/* HOVER BOTON */
+
+.modal-content button:hover{
+
+transform:scale(1.04);
+
+background:linear-gradient(135deg,#9b8fe2,#7867d8);
+
+}

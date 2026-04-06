@@ -1,0 +1,164 @@
+/* HEADER */
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:30px 60px;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+/* BOTON VOLVER */
+
+.back-admin-btn{
+
+padding:10px 16px;
+
+border:none;
+
+border-radius:8px;
+
+background:#2d2842;
+
+color:white;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.back-admin-btn:hover{
+
+background:#8e7dff;
+
+}
+
+
+/* GRID USUARIOS */
+
+.users-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+padding:40px 60px;
+
+}
+
+/* TARJETA USUARIO */
+
+.user-card{
+
+background:#1f1c2d;
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:14px;
+
+padding:20px;
+
+text-align:center;
+
+transition:.25s;
+
+}
+
+.user-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#8e7dff;
+
+}
+
+/* AVATAR */
+
+.user-avatar{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:10px;
+
+}
+
+/* ACCIONES */
+
+.user-actions{
+
+margin-top:12px;
+
+display:flex;
+
+gap:10px;
+
+justify-content:center;
+
+}
+
+.edit-user{
+
+background:#8e7dff;
+
+border:none;
+
+padding:8px 14px;
+
+border-radius:8px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.delete-user{
+
+background:#b33939;
+
+border:none;
+
+padding:8px 14px;
+
+border-radius:8px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+@media (max-width:1000px){
+
+.users-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:600px){
+
+.users-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

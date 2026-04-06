@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Administrar Usuarios</title>
+
+<link rel="stylesheet" href="../album/album.css">
+<link rel="stylesheet" href="admin_users.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Administración de Usuarios</h1>
+
+<button class="back-admin-btn" onclick="window.location.href='admin.html'">
+Volver al panel
+</button>
+
+</header>
+
+<main>
+
+<div class="users-grid" id="usersGrid">
+
+<div class="user-card">
+
+<img src="../album/img/user.png" class="user-avatar">
+
+<h3>@Usuario1</h3>
+
+<p>Cartas: 52 / 165</p>
+<p>Repetidas: 12</p>
+<p>Ranking: #8</p>
+
+<div class="user-actions">
+
+<button class="edit-user">Editar</button>
+
+<button class="delete-user">Eliminar</button>
+
+</div>
+
+</div>
+
+<div class="user-card">
+
+<img src="../album/img/user.png" class="user-avatar">
+
+<h3>@Usuario2</h3>
+
+<p>Cartas: 34 / 165</p>
+<p>Repetidas: 6</p>
+<p>Ranking: #15</p>
+
+<div class="user-actions">
+
+<button class="edit-user">Editar</button>
+
+<button class="delete-user">Eliminar</button>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="admin_users.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/* GRID SOBRES */
+
+.packs-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+padding:40px 60px;
+
+}
+
+/* TARJETA SOBRE */
+
+.pack-card{
+
+background:#1f1c2d;
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:14px;
+
+padding:20px;
+
+text-align:center;
+
+transition:.25s;
+
+}
+
+.pack-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#8e7dff;
+
+}
+
+/* IMAGEN */
+
+.pack-card img{
+
+width:120px;
+
+margin-bottom:10px;
+
+}
+
+/* BOTON COMPRAR */
+
+.pack-card button{
+
+margin-top:10px;
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:8px;
+
+background:#8e7dff;
+
+color:white;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.pack-card button:hover{
+
+background:#a495ff;
+
+}
+
+/* MIS SOBRES */
+
+.my-packs{
+
+display:flex;
+
+gap:20px;
+
+padding:30px 60px;
+
+}
+
+/* BOTON ABRIR */
+
+.open-pack-btn{
+
+margin:30px auto;
+
+width:200px;
+
+text-align:center;
+
+padding:14px;
+
+border-radius:12px;
+
+background:linear-gradient(90deg,#8e7dff,#c3baff);
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.2s;
+
+}
+
+.open-pack-btn:hover{
+
+transform:scale(1.05);
+
+}
